@@ -7,14 +7,16 @@ const addNoteStream = rxjs.fromEvent(addNoteButton, 'click');
 addNoteStream.subscribe(() => {
     const noteText = noteInput.value.trim();
     if (noteText) {
-        createNoteElement(noteText);
+        const noteColor = document.getElementById("color-picker").value;
+        createNoteElement(noteText, noteColor);
         noteInput.value = '';
     }
 });
 
-function createNoteElement(text) {
+function createNoteElement(text, noteColor) {
     const noteElement = document.createElement('div');
     noteElement.classList.add('note');
+    noteElement.style.backgroundColor = noteColor;
 
     const noteTextElement = document.createElement('div');
     noteTextElement.textContent = text;
