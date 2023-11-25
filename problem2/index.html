@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RxJS Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="timerInput">
+        <input type="number" id="hoursInput" placeholder="HH" min="0" max="23">
+        <span>:</span>
+        <input type="number" id="minutesInput" placeholder="MM" min="0" max="59">
+        <span>:</span>
+        <input type="number" id="secondsInput" placeholder="SS" min="0" max="59">
+        <button id="startTimer">Start Countdown</button>
+    </div>
+    <div id="countdownDisplay">
+        <span id="hoursDisplay">00</span>:<span id="minutesDisplay">00</span>:<span id="secondsDisplay">00</span>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.4.0/rxjs.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
