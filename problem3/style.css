@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.app {
+    width: 80%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#noteInput {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.note {
+    background-color: #ffff88;
+    padding: 10px;
+    margin-top: 10px;
+    position: relative;
+    padding-right: 60px; 
+}
+
+.note div {
+    word-wrap: break-word; 
+}
+
+.edit, .delete {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    width: 40px; 
+    text-align: center; 
+}
+
+.edit {
+    right: 50px; 
+}
+
+.delete {
+    right: 10px; 
+}
