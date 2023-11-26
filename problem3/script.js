@@ -1,11 +1,12 @@
 const { fromEvent } = rxjs;
-
+let noteIdCounter = 0;
 class Note {
     constructor(id, text, color, parent = null) {
         this.id = id;
         this.text = text;
         this.color = color;
         this.parent = parent;
+
         this.children = [];
         this.element = this.createElement();
         
@@ -94,7 +95,7 @@ addNoteStream.subscribe(() => {
         const parent = parentNoteId ? notesMap[parentNoteId] : null;
 
         // Generate a unique ID for the note
-        const noteId = `note-${Date.now()}`;
+        const noteId = `note-${++noteIdCounter}`;
         const note = new Note(noteId, noteText, noteColor, parent);
         
         // Add the note to the notes container
